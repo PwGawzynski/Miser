@@ -5,8 +5,9 @@ import { Text, View } from 'react-native';
 export default function App(): JSX.Element {
   return (
     <View className="flex-1 items-center justify-center bg-white">
-      <Text className="text-bubble-gum">KURWAAAA DZIAŁAJ </Text>
-      <View className="bg-midnight"></View>
+      <Text className="text-bubble-gum">
+        Witam kurwa brać się do roboty szmaty
+      </Text>
       <StatusBar style="auto" />
     </View>
   );
