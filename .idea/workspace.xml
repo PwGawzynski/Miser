@@ -1,8 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d249c390-4e61-45fb-afd1-8eb3dce41446" name="Changes" comment="develop init">
+    <list default="true" id="d249c390-4e61-45fb-afd1-8eb3dce41446" name="Changes" comment="update">
+      <change afterPath="$PROJECT_DIR$/src/Components/Organisms/DrawerMenuItem.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Components/Pages/AboutDeals.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Components/Pages/AccountSettings.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Components/Pages/Filters.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Components/Pages/Home.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Navigation/Drawer/CustomDrawer.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.eslintignore" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.eslintrc.js" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintrc.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/babel.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/babel.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -12,10 +24,18 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="Main" />
+        <entry key="$PROJECT_DIR$" value="develop" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
+  </component>
+  <component name="GithubProjectSettings">
+    <option name="branchProtectionPatterns">
+      <list>
+        <option value="develop" />
+      </list>
+    </option>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -41,6 +61,11 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/Components" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="filint:fix" type="js.build_tools.npm" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
@@ -76,6 +101,9 @@
       <workItem from="1666189845722" duration="391000" />
       <workItem from="1666190272272" duration="7654000" />
       <workItem from="1666199114158" duration="530000" />
+      <workItem from="1666534059050" duration="3196000" />
+      <workItem from="1666537278136" duration="14769000" />
+      <workItem from="1666684649990" duration="10196000" />
     </task>
     <task id="LOCAL-00001" summary="Created basic environment for this project added prettier and eslint to project for taking care of clean code and config nativeWind for styling in this project">
       <created>1666197424910</created>
