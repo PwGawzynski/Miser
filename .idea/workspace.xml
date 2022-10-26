@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d249c390-4e61-45fb-afd1-8eb3dce41446" name="Changes" comment="done all btns for custom drawer, added possibility to redirect on click to given screen">
-      <change afterPath="$PROJECT_DIR$/declarations.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/metro.config.js" afterDir="false" />
+    <list default="true" id="d249c390-4e61-45fb-afd1-8eb3dce41446" name="Changes" comment="added new base color">
+      <change afterPath="$PROJECT_DIR$/src/Components/Atoms/LargeLabel.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Components/Atoms/SmallLabel.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Components/Organisms/UserAccountCard.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/Logout.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.eslintrc.js" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintrc.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Components/Organisms/DrawerMenuItem.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Organisms/DrawerMenuItem.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Pages/AboutDeals.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Pages/LogOut.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Navigation/Drawer/CustomDrawer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Navigation/Drawer/CustomDrawer.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tailwind.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/tailwind.config.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -104,7 +104,7 @@
       <workItem from="1666534059050" duration="3196000" />
       <workItem from="1666537278136" duration="14769000" />
       <workItem from="1666684649990" duration="28781000" />
-      <workItem from="1666819783212" duration="993000" />
+      <workItem from="1666819783212" duration="6228000" />
     </task>
     <task id="LOCAL-00001" summary="Created basic environment for this project added prettier and eslint to project for taking care of clean code and config nativeWind for styling in this project">
       <created>1666197424910</created>
@@ -197,7 +197,56 @@
       <option name="project" value="LOCAL" />
       <updated>1666820751094</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="declaration for react-native-svg-transformer">
+      <created>1666820790382</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1666820790382</updated>
+    </task>
+    <task id="LOCAL-00015" summary="added styling for drawer elements">
+      <created>1666820815255</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1666820815255</updated>
+    </task>
+    <task id="LOCAL-00016" summary="added screen">
+      <created>1666820836429</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1666820836429</updated>
+    </task>
+    <task id="LOCAL-00017" summary="added LogOut screen">
+      <created>1666821016452</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1666821016452</updated>
+    </task>
+    <task id="LOCAL-00018" summary="metro config">
+      <created>1666821028527</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1666821028527</updated>
+    </task>
+    <task id="LOCAL-00019" summary="conf">
+      <created>1666821038660</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1666821038660</updated>
+    </task>
+    <task id="LOCAL-00020" summary="added new base color">
+      <created>1666821057359</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1666821057359</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -232,7 +281,14 @@
     <MESSAGE value="idaConf" />
     <MESSAGE value="created sample component for testing router" />
     <MESSAGE value="done all btns for custom drawer, added possibility to redirect on click to given screen" />
-    <option name="LAST_COMMIT_MESSAGE" value="done all btns for custom drawer, added possibility to redirect on click to given screen" />
+    <MESSAGE value="declaration for react-native-svg-transformer" />
+    <MESSAGE value="added styling for drawer elements" />
+    <MESSAGE value="added screen" />
+    <MESSAGE value="added LogOut screen" />
+    <MESSAGE value="metro config" />
+    <MESSAGE value="conf" />
+    <MESSAGE value="added new base color" />
+    <option name="LAST_COMMIT_MESSAGE" value="added new base color" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
