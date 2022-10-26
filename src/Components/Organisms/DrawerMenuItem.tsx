@@ -1,5 +1,5 @@
 import React from 'react';
-import { Text, View } from 'react-native';
+import { Text, TouchableOpacity } from 'react-native';
 
 import { useNavigation } from '@react-navigation/native';
 
@@ -10,15 +10,11 @@ export interface Props {
 export function DrawerMenuItem({ screenName }: Props) {
   const navigation = useNavigation();
   return (
-    <View className={'h-80 min-w-full bg-midnight'}>
-      <Text
-        onPress={() =>
-          // @typescript-eslint/no-unsafe-member-access
-          navigation.navigate(screenName as never)
-        }
-      >
-        {screenName}
-      </Text>
-    </View>
+    <TouchableOpacity
+      onPress={() => navigation.navigate(screenName as never)}
+      className={'h-12 min-w-full  items-center justify-center bg-bermuda '}
+    >
+      <Text className={'text-2xl'}>{screenName}</Text>
+    </TouchableOpacity>
   );
 }
