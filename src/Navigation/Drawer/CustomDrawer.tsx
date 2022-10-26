@@ -2,18 +2,21 @@ import React from 'react';
 import {
   DrawerContentComponentProps,
   DrawerContentScrollView,
-  DrawerItem,
-  DrawerItemList,
 } from '@react-navigation/drawer';
-import { Text, View } from 'react-native';
+import { View } from 'react-native';
 import { DrawerMenuItem } from '../../Components/Organisms/DrawerMenuItem';
 
-export function CustomDrawer(props: DrawerContentComponentProps) {
+export interface CustomDrawerProps extends DrawerContentComponentProps {
+  screenList: string[];
+}
+
+export function CustomDrawer(props: CustomDrawerProps) {
   return (
     <DrawerContentScrollView {...props}>
       <View className={'items-center justify-center bg-metal'}>
-        <Text className={'text-white'}>Elo elo z drawera</Text>
-        <DrawerMenuItem screenName={'Home'} />
+        {props.screenList.map((screenName) => (
+          <DrawerMenuItem screenName={screenName} key={screenName} />
+        ))}
       </View>
     </DrawerContentScrollView>
   );
