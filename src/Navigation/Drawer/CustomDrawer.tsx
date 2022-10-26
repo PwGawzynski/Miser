@@ -9,11 +9,14 @@ import Home from '../../assets/Home.svg';
 import AccountSettingsSVG from '../../assets/AccountSettings.svg';
 import FiltersSVG from '../../assets/Filters.svg';
 import AchievementsSVG from '../../assets/Achievements.svg';
+import LogOutSVG from '../../assets/Logout.svg';
+import { UserAccountCard } from '../../Components/Organisms/UserAccountCard';
 
 export function CustomDrawer(props: DrawerContentComponentProps) {
   return (
     <DrawerContentScrollView {...props}>
       <View className={'items-center justify-center bg-black pl-11'}>
+        <UserAccountCard />
         {/* home drawer menu BTN */}
         <DrawerMenuItem {...props} name={'Home'} nameForNavigator={'Home'}>
           <Home />
@@ -44,7 +47,7 @@ export function CustomDrawer(props: DrawerContentComponentProps) {
           name={'Log Out'}
           nameForNavigator={'Achievements'}
         >
-          <AchievementsSVG />
+          <LogOutSVG />
         </DrawerMenuItem>
       </View>
     </DrawerContentScrollView>
