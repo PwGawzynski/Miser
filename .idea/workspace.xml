@@ -1,20 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d249c390-4e61-45fb-afd1-8eb3dce41446" name="Changes" comment="update">
-      <change afterPath="$PROJECT_DIR$/src/Components/Organisms/DrawerMenuItem.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Components/Pages/AboutDeals.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Components/Pages/AccountSettings.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Components/Pages/Filters.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Components/Pages/Home.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Navigation/Drawer/CustomDrawer.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.eslintignore" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.eslintrc.js" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintrc.js" afterDir="false" />
+    <list default="true" id="d249c390-4e61-45fb-afd1-8eb3dce41446" name="Changes" comment="done all btns for custom drawer, added possibility to redirect on click to given screen">
+      <change afterPath="$PROJECT_DIR$/declarations.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/metro.config.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/babel.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/babel.config.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Organisms/DrawerMenuItem.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Organisms/DrawerMenuItem.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Pages/AboutDeals.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Pages/LogOut.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tailwind.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/tailwind.config.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,7 +45,7 @@
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/pwgawzynski/WebstormProjects/AM_PROJ/miser&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/pwgawzynski/WebstormProjects/AM_PROJ/miser/src/assets&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.standard&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -62,6 +58,10 @@
   }
 }</component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/assets" />
+      <recent name="$PROJECT_DIR$/src/assets/svgs" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/Components" />
     </key>
@@ -103,7 +103,8 @@
       <workItem from="1666199114158" duration="530000" />
       <workItem from="1666534059050" duration="3196000" />
       <workItem from="1666537278136" duration="14769000" />
-      <workItem from="1666684649990" duration="10196000" />
+      <workItem from="1666684649990" duration="28781000" />
+      <workItem from="1666819783212" duration="993000" />
     </task>
     <task id="LOCAL-00001" summary="Created basic environment for this project added prettier and eslint to project for taking care of clean code and config nativeWind for styling in this project">
       <created>1666197424910</created>
@@ -119,7 +120,84 @@
       <option name="project" value="LOCAL" />
       <updated>1666197648023</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="fast comit">
+      <created>1666736158066</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1666736158067</updated>
+    </task>
+    <task id="LOCAL-00004" summary="added interface to custom drawer, and rendering fn. for render elements using given arr of names">
+      <created>1666763692775</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1666763692775</updated>
+    </task>
+    <task id="LOCAL-00005" summary="created single menu touchable item">
+      <created>1666763734421</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1666763734421</updated>
+    </task>
+    <task id="LOCAL-00006" summary="added rendering custom drawer based on screen list">
+      <created>1666763771912</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1666763771912</updated>
+    </task>
+    <task id="LOCAL-00007" summary="added idea">
+      <created>1666763886227</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1666763886227</updated>
+    </task>
+    <task id="LOCAL-00008" summary="addded file to ignore">
+      <created>1666820396860</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1666820396860</updated>
+    </task>
+    <task id="LOCAL-00009" summary="added assets">
+      <created>1666820409496</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1666820409496</updated>
+    </task>
+    <task id="LOCAL-00010" summary="idaConf">
+      <created>1666820433994</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1666820433994</updated>
+    </task>
+    <task id="LOCAL-00011" summary="created sample component for testing router">
+      <created>1666820668517</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1666820668517</updated>
+    </task>
+    <task id="LOCAL-00012" summary="created sample component for testing router">
+      <created>1666820684813</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1666820684813</updated>
+    </task>
+    <task id="LOCAL-00013" summary="done all btns for custom drawer, added possibility to redirect on click to given screen">
+      <created>1666820751094</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1666820751094</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -144,7 +222,17 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Created basic environment for this project added prettier and eslint to project for taking care of clean code and config nativeWind for styling in this project" />
     <MESSAGE value="develop init" />
-    <option name="LAST_COMMIT_MESSAGE" value="develop init" />
+    <MESSAGE value="fast comit" />
+    <MESSAGE value="added interface to custom drawer, and rendering fn. for render elements using given arr of names" />
+    <MESSAGE value="created single menu touchable item" />
+    <MESSAGE value="added rendering custom drawer based on screen list" />
+    <MESSAGE value="added idea" />
+    <MESSAGE value="addded file to ignore" />
+    <MESSAGE value="added assets" />
+    <MESSAGE value="idaConf" />
+    <MESSAGE value="created sample component for testing router" />
+    <MESSAGE value="done all btns for custom drawer, added possibility to redirect on click to given screen" />
+    <option name="LAST_COMMIT_MESSAGE" value="done all btns for custom drawer, added possibility to redirect on click to given screen" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
