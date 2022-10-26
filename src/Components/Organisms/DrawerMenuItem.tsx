@@ -1,20 +1,23 @@
 import React from 'react';
 import { Text, TouchableOpacity } from 'react-native';
+import { DrawerContentComponentProps } from '@react-navigation/drawer';
 
-import { useNavigation } from '@react-navigation/native';
-
-export interface Props {
-  screenName: string;
+export interface DrawerMenuItemProps extends DrawerContentComponentProps {
+  name: string;
+  nameForNavigator: string;
+  children: React.ReactNode;
 }
 
-export function DrawerMenuItem({ screenName }: Props) {
-  const navigation = useNavigation();
+export function DrawerMenuItem({ ...props }: DrawerMenuItemProps) {
   return (
     <TouchableOpacity
-      onPress={() => navigation.navigate(screenName as never)}
-      className={'h-12 min-w-full  items-center justify-center bg-bermuda '}
+      onPress={() => props.navigation.navigate(props.nameForNavigator)}
+      className={
+        'flex h-12 min-w-full  flex-row items-center justify-start bg-transparent'
+      }
     >
-      <Text className={'text-2xl'}>{screenName}</Text>
+      {props.children}
+      <Text className={'ml-8 text-2xl text-white'}>{props.name}</Text>
     </TouchableOpacity>
   );
 }
