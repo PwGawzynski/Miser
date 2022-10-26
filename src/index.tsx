@@ -23,7 +23,12 @@ export default function App(): JSX.Element {
     <NavigationContainer>
       <Drawer.Navigator
         initialRouteName="Home"
-        drawerContent={(props) => <CustomDrawer {...props} />}
+        drawerContent={(props) => (
+          <CustomDrawer
+            {...props}
+            screenList={['Home', 'AccountSettings', 'Filters', 'AboutDeals']}
+          />
+        )}
         screenOptions={{
           drawerHideStatusBarOnOpen: true,
           unmountOnBlur: true,
