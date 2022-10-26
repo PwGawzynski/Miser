@@ -6,13 +6,15 @@ import { createDrawerNavigator } from '@react-navigation/drawer';
 import 'react-native-gesture-handler';
 import { CustomDrawer } from './Navigation/Drawer/CustomDrawer';
 import { Filters } from './Components/Pages/Filters';
-import { AboutDeals } from './Components/Pages/AboutDeals';
+import { Achievements } from './Components/Pages/Achievements';
+import { LogOut } from './Components/Pages/LogOut';
 
 export type RootStackParamList = {
   Home: undefined;
   AccountSettings: undefined;
   Filters: undefined;
-  AboutDeals: undefined;
+  LogOut: undefined;
+  Achievements: undefined;
 };
 
 // const Stack = createNativeStackNavigator<RootStackParamList>();
@@ -23,17 +25,13 @@ export default function App(): JSX.Element {
     <NavigationContainer>
       <Drawer.Navigator
         initialRouteName="Home"
-        drawerContent={(props) => (
-          <CustomDrawer
-            {...props}
-            screenList={['Home', 'AccountSettings', 'Filters', 'AboutDeals']}
-          />
-        )}
+        drawerContent={(props) => <CustomDrawer {...props} />}
         screenOptions={{
           drawerHideStatusBarOnOpen: true,
           unmountOnBlur: true,
           drawerStyle: {
             width: '100%',
+            backgroundColor: '#000',
           },
           drawerItemStyle: {
             width: '100%',
@@ -62,8 +60,15 @@ export default function App(): JSX.Element {
           }}
         />
         <Drawer.Screen
-          name="AboutDeals"
-          component={AboutDeals}
+          name="Achievements"
+          component={Achievements}
+          options={{
+            headerShown: false,
+          }}
+        />
+        <Drawer.Screen
+          name="LogOut"
+          component={LogOut}
           options={{
             headerShown: false,
           }}
