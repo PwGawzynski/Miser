@@ -1,5 +1,5 @@
 import React from 'react';
-import { Text, TouchableOpacity } from 'react-native';
+import { TouchableOpacity } from 'react-native';
 import { DrawerContentComponentProps } from '@react-navigation/drawer';
 import { LargeLabel } from '../Atoms/LargeLabel';
 
