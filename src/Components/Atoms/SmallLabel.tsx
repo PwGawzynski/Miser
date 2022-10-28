@@ -3,13 +3,13 @@ import React from 'react';
 
 export interface Props {
   content: string;
-  className?: string;
+  customStyles?: string;
 }
 
 export const SmallLabel = (props: Props) => {
+  console.log(props.customStyles);
   return (
-    // eslint-disable-next-line @typescript-eslint/restrict-plus-operands
-    <Text className={'ml-8 text-sm text-white ' + props.className}>
+    <Text className={'ml-8 text-sm' + (props.customStyles ?? '')}>
       {props.content}
     </Text>
   );
