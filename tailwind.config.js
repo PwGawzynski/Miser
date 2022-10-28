@@ -16,6 +16,7 @@ module.exports = {
       bermuda: '#78dcca',
       black: '#000',
       gray: '#848484',
+      orange: '#EAA566',
     },
   },
   plugins: [],
