@@ -1,6 +1,7 @@
 import React from 'react';
-import { Text, TouchableOpacity } from 'react-native';
+import { TouchableOpacity } from 'react-native';
 import { DrawerContentComponentProps } from '@react-navigation/drawer';
+import { LargeLabel } from '../Atoms/LargeLabel';
 
 export interface DrawerMenuItemProps extends DrawerContentComponentProps {
   name: string;
@@ -17,7 +18,7 @@ export function DrawerMenuItem({ ...props }: DrawerMenuItemProps) {
       }
     >
       {props.children}
-      <Text className={'ml-8 text-2xl text-white'}>{props.name}</Text>
+      <LargeLabel content={props.name} />
     </TouchableOpacity>
   );
 }
