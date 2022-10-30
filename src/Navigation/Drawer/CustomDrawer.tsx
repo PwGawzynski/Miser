@@ -42,11 +42,7 @@ export function CustomDrawer(props: DrawerContentComponentProps) {
         >
           <AchievementsSVG />
         </DrawerMenuItem>
-        <DrawerMenuItem
-          {...props}
-          name={'Log Out'}
-          nameForNavigator={'Achievements'}
-        >
+        <DrawerMenuItem {...props} name={'Log Out'} nameForNavigator={'LogOut'}>
           <LogOutSVG />
         </DrawerMenuItem>
       </View>
