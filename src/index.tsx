@@ -1,79 +1,102 @@
-import React from 'react';
-import { NavigationContainer } from '@react-navigation/native';
-import { Home } from './Components/Pages/Home';
-import { AccountSettings } from './Components/Pages/AccountSettings';
-import { createDrawerNavigator } from '@react-navigation/drawer';
+import React, { createContext, useEffect, useMemo, useReducer } from 'react';
 import 'react-native-gesture-handler';
-import { CustomDrawer } from './Navigation/Drawer/CustomDrawer';
-import { Filters } from './Components/Pages/Filters';
-import { Achievements } from './Components/Pages/Achievements';
-import { LogOut } from './Components/Pages/LogOut';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import { NavigationContainer } from '@react-navigation/native';
+import { DrawerMenu } from './Components/Organisms/DrawerMenu';
+import { LoginPage } from './Components/Pages/LoginPage';
 
-export type RootStackParamList = {
-  Home: undefined;
-  AccountSettings: undefined;
-  Filters: undefined;
-  LogOut: undefined;
-  Achievements: undefined;
+export interface LoginData {
+  login: string;
+  password: string;
+}
+
+export interface AuthContentObject {
+  login: (data: LoginData) => void;
+  logOut: () => void;
+}
+
+export interface AuthStateI {
+  signIn: boolean;
+}
+
+export enum OperationType {
+  login,
+  logOut,
+}
+export const AuthContextProvider = createContext<AuthContentObject | undefined>(
+  undefined,
+);
+
+const Stack = createNativeStackNavigator<AuthRootStackParamList>();
+
+export type AuthRootStackParamList = {
+  LoginPage: undefined;
+  Auth: undefined;
 };
 
-// const Stack = createNativeStackNavigator<RootStackParamList>();
-const Drawer = createDrawerNavigator<RootStackParamList>();
-
 export default function App(): JSX.Element {
+  const [authState, dispatch] = useReducer(
+    (prev: AuthStateI, operation: OperationType) => {
+      switch (operation) {
+        case OperationType.login:
+          return {
+            ...prev,
+            signIn: true,
+          };
+        case OperationType.logOut:
+          return {
+            ...prev,
+            signIn: false,
+          };
+      }
+    },
+    {
+      signIn: false,
+    },
+  );
+
+  useEffect(() => {
+    // eslint-disable-next-line @typescript-eslint/require-await
+    void (async () => {
+      dispatch(OperationType.logOut);
+    })();
+  }, []);
+
+  const authProvider = useMemo(
+    () => ({
+      login: (data: LoginData) => {
+        const { login, password } = data;
+        login === 'user' && password === '123'
+          ? dispatch(OperationType.login)
+          : dispatch(OperationType.logOut);
+      },
+      logOut: () => {
+        dispatch(OperationType.logOut);
+      },
+    }),
+    [],
+  );
+
   return (
-    <NavigationContainer>
-      <Drawer.Navigator
-        initialRouteName="Home"
-        drawerContent={(props) => <CustomDrawer {...props} />}
-        screenOptions={{
-          drawerHideStatusBarOnOpen: true,
-          unmountOnBlur: true,
-          drawerStyle: {
-            width: '100%',
-            backgroundColor: '#000',
-          },
-          drawerItemStyle: {
-            width: '100%',
-          },
-        }}
-      >
-        <Drawer.Screen
-          name="Home"
-          component={Home}
-          options={{
-            headerShown: false,
-          }}
-        />
-        <Drawer.Screen
-          name="AccountSettings"
-          component={AccountSettings}
-          options={{
-            headerShown: false,
-          }}
-        />
-        <Drawer.Screen
-          name="Filters"
-          component={Filters}
-          options={{
-            headerShown: false,
-          }}
-        />
-        <Drawer.Screen
-          name="Achievements"
-          component={Achievements}
-          options={{
-            headerShown: false,
-          }}
-        />
-        <Drawer.Screen
-          name="LogOut"
-          component={LogOut}
-          options={{
-            headerShown: false,
-          }}
-        />
-      </Drawer.Navigator>
-    </NavigationContainer>
+    <AuthContextProvider.Provider value={authProvider}>
+      <NavigationContainer independent={true}>
+        <Stack.Navigator>
+          {authState.signIn ? (
+            <Stack.Screen
+              name={'Auth'}
+              options={{
+                headerShown: false,
+              }}
+            >
+              {() => <DrawerMenu />}
+            </Stack.Screen>
+          ) : (
+            <Stack.Screen name={'LoginPage'} options={{ headerShown: false }}>
+              {() => <LoginPage />}
+            </Stack.Screen>
+          )}
+        </Stack.Navigator>
+      </NavigationContainer>
+    </AuthContextProvider.Provider>
   );
 }
