@@ -78,6 +78,7 @@ module.exports = {
     '@typescript-eslint/consistent-type-definitions': 'type' | 'interface',
     '@typescript-eslint/explicit-function-return-type': 'off',
     '@typescript-eslint/restrict-plus-operands': 'off',
+    'multiline-ternary': 'off',
   },
   settings: {
     react: {
