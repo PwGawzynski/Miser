@@ -1,7 +1,7 @@
 import React from 'react';
 import { View } from 'react-native';
 import { LargeLabel } from '../Atoms/LargeLabel';
-import { AddedDealsInfo } from '../Molecules/AddedDealsInfo';
+import { SmallNote } from '../Molecules/SmallNote';
 import { UserProfilePhoto } from './UserProfilePhoto';
 
 export const UserAccountCard = () => {
@@ -9,10 +9,12 @@ export const UserAccountCard = () => {
     <View className={'flex h-96 w-screen flex-row items-center justify-start '}>
       <UserProfilePhoto />
       <View className={'flex-column flex'}>
-        <LargeLabel content={'User_name'} />
-        <AddedDealsInfo
-          addedDealsNumberColor={'text-orange ml-0'}
-          dealsCount={100}
+        <LargeLabel content={'User_name'} customStyles={'ml-8'} />
+        <SmallNote
+          childrenContentOn={false}
+          secondPartCustomStyles={'text-orange ml-0'}
+          secondPartText={'100'}
+          firstPartText={'Added deals: '}
         />
       </View>
     </View>
