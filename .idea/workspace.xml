@@ -1,16 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d249c390-4e61-45fb-afd1-8eb3dce41446" name="Changes" comment="added new base color">
-      <change afterPath="$PROJECT_DIR$/src/Components/Atoms/LargeLabel.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Components/Atoms/SmallLabel.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Components/Organisms/UserAccountCard.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/Logout.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.eslintrc.js" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintrc.js" afterDir="false" />
+    <list default="true" id="d249c390-4e61-45fb-afd1-8eb3dce41446" name="Changes" comment=" added footnote">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Organisms/DrawerMenuItem.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Organisms/DrawerMenuItem.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Navigation/Drawer/CustomDrawer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Navigation/Drawer/CustomDrawer.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tailwind.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/tailwind.config.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,7 +37,7 @@
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/pwgawzynski/WebstormProjects/AM_PROJ/miser/src/assets&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/pwgawzynski/WebstormProjects/AM_PROJ/miser&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.standard&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -57,15 +49,6 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/assets" />
-      <recent name="$PROJECT_DIR$/src/assets/svgs" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/Components" />
-    </key>
-  </component>
   <component name="RunManager">
     <configuration name="filint:fix" type="js.build_tools.npm" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
@@ -101,10 +84,6 @@
       <workItem from="1666189845722" duration="391000" />
       <workItem from="1666190272272" duration="7654000" />
       <workItem from="1666199114158" duration="530000" />
-      <workItem from="1666534059050" duration="3196000" />
-      <workItem from="1666537278136" duration="14769000" />
-      <workItem from="1666684649990" duration="28781000" />
-      <workItem from="1666819783212" duration="6228000" />
     </task>
     <task id="LOCAL-00001" summary="Created basic environment for this project added prettier and eslint to project for taking care of clean code and config nativeWind for styling in this project">
       <created>1666197424910</created>
@@ -120,131 +99,131 @@
       <option name="project" value="LOCAL" />
       <updated>1666197648023</updated>
     </task>
-    <task id="LOCAL-00003" summary="fast comit">
-      <created>1666736158066</created>
+    <task id="LOCAL-00003" summary="switched off multiline-ternary">
+      <created>1667126301895</created>
       <option name="number" value="00003" />
       <option name="presentableId" value="LOCAL-00003" />
       <option name="project" value="LOCAL" />
-      <updated>1666736158067</updated>
+      <updated>1667126301895</updated>
     </task>
-    <task id="LOCAL-00004" summary="added interface to custom drawer, and rendering fn. for render elements using given arr of names">
-      <created>1666763692775</created>
+    <task id="LOCAL-00004" summary="added logOut action">
+      <created>1667126355468</created>
       <option name="number" value="00004" />
       <option name="presentableId" value="LOCAL-00004" />
       <option name="project" value="LOCAL" />
-      <updated>1666763692775</updated>
+      <updated>1667126355468</updated>
     </task>
-    <task id="LOCAL-00005" summary="created single menu touchable item">
-      <created>1666763734421</created>
+    <task id="LOCAL-00005" summary="Created Drawer menu component">
+      <created>1667126409569</created>
       <option name="number" value="00005" />
       <option name="presentableId" value="LOCAL-00005" />
       <option name="project" value="LOCAL" />
-      <updated>1666763734421</updated>
+      <updated>1667126409569</updated>
     </task>
-    <task id="LOCAL-00006" summary="added rendering custom drawer based on screen list">
-      <created>1666763771912</created>
+    <task id="LOCAL-00006" summary="Added auth">
+      <created>1667126453801</created>
       <option name="number" value="00006" />
       <option name="presentableId" value="LOCAL-00006" />
       <option name="project" value="LOCAL" />
-      <updated>1666763771912</updated>
+      <updated>1667126453801</updated>
     </task>
-    <task id="LOCAL-00007" summary="added idea">
-      <created>1666763886227</created>
+    <task id="LOCAL-00007" summary="Added Login page">
+      <created>1667126468510</created>
       <option name="number" value="00007" />
       <option name="presentableId" value="LOCAL-00007" />
       <option name="project" value="LOCAL" />
-      <updated>1666763886227</updated>
+      <updated>1667126468510</updated>
     </task>
-    <task id="LOCAL-00008" summary="addded file to ignore">
-      <created>1666820396860</created>
+    <task id="LOCAL-00008" summary="Added Log Out page">
+      <created>1667126495888</created>
       <option name="number" value="00008" />
       <option name="presentableId" value="LOCAL-00008" />
       <option name="project" value="LOCAL" />
-      <updated>1666820396860</updated>
+      <updated>1667126495888</updated>
     </task>
-    <task id="LOCAL-00009" summary="added assets">
-      <created>1666820409496</created>
+    <task id="LOCAL-00009" summary="Created Reusable button">
+      <created>1667202115546</created>
       <option name="number" value="00009" />
       <option name="presentableId" value="LOCAL-00009" />
       <option name="project" value="LOCAL" />
-      <updated>1666820409496</updated>
+      <updated>1667202115546</updated>
     </task>
-    <task id="LOCAL-00010" summary="idaConf">
-      <created>1666820433994</created>
+    <task id="LOCAL-00010" summary="Added styles">
+      <created>1667202130723</created>
       <option name="number" value="00010" />
       <option name="presentableId" value="LOCAL-00010" />
       <option name="project" value="LOCAL" />
-      <updated>1666820433994</updated>
+      <updated>1667202130723</updated>
     </task>
-    <task id="LOCAL-00011" summary="created sample component for testing router">
-      <created>1666820668517</created>
+    <task id="LOCAL-00011" summary="Added styles">
+      <created>1667202159545</created>
       <option name="number" value="00011" />
       <option name="presentableId" value="LOCAL-00011" />
       <option name="project" value="LOCAL" />
-      <updated>1666820668517</updated>
+      <updated>1667202159545</updated>
     </task>
-    <task id="LOCAL-00012" summary="created sample component for testing router">
-      <created>1666820684813</created>
+    <task id="LOCAL-00012" summary="Created large label component">
+      <created>1667202192002</created>
       <option name="number" value="00012" />
       <option name="presentableId" value="LOCAL-00012" />
       <option name="project" value="LOCAL" />
-      <updated>1666820684813</updated>
+      <updated>1667202192002</updated>
     </task>
-    <task id="LOCAL-00013" summary="done all btns for custom drawer, added possibility to redirect on click to given screen">
-      <created>1666820751094</created>
+    <task id="LOCAL-00013" summary="Created login form component with states">
+      <created>1667202207410</created>
       <option name="number" value="00013" />
       <option name="presentableId" value="LOCAL-00013" />
       <option name="project" value="LOCAL" />
-      <updated>1666820751094</updated>
+      <updated>1667202207410</updated>
     </task>
-    <task id="LOCAL-00014" summary="declaration for react-native-svg-transformer">
-      <created>1666820790382</created>
+    <task id="LOCAL-00014" summary="Created login page">
+      <created>1667202230644</created>
       <option name="number" value="00014" />
       <option name="presentableId" value="LOCAL-00014" />
       <option name="project" value="LOCAL" />
-      <updated>1666820790382</updated>
+      <updated>1667202230644</updated>
     </task>
-    <task id="LOCAL-00015" summary="added styling for drawer elements">
-      <created>1666820815255</created>
+    <task id="LOCAL-00015" summary="Created log out page">
+      <created>1667202261879</created>
       <option name="number" value="00015" />
       <option name="presentableId" value="LOCAL-00015" />
       <option name="project" value="LOCAL" />
-      <updated>1666820815255</updated>
+      <updated>1667202261879</updated>
     </task>
-    <task id="LOCAL-00016" summary="added screen">
-      <created>1666820836429</created>
+    <task id="LOCAL-00016" summary="created Pressable text component">
+      <created>1667202287710</created>
       <option name="number" value="00016" />
       <option name="presentableId" value="LOCAL-00016" />
       <option name="project" value="LOCAL" />
-      <updated>1666820836429</updated>
+      <updated>1667202287710</updated>
     </task>
-    <task id="LOCAL-00017" summary="added LogOut screen">
-      <created>1666821016452</created>
+    <task id="LOCAL-00017" summary="Created small label component">
+      <created>1667202314966</created>
       <option name="number" value="00017" />
       <option name="presentableId" value="LOCAL-00017" />
       <option name="project" value="LOCAL" />
-      <updated>1666821016452</updated>
+      <updated>1667202314966</updated>
     </task>
-    <task id="LOCAL-00018" summary="metro config">
-      <created>1666821028527</created>
+    <task id="LOCAL-00018" summary="Created component for containing footnote">
+      <created>1667202358091</created>
       <option name="number" value="00018" />
       <option name="presentableId" value="LOCAL-00018" />
       <option name="project" value="LOCAL" />
-      <updated>1666821028527</updated>
+      <updated>1667202358091</updated>
     </task>
-    <task id="LOCAL-00019" summary="conf">
-      <created>1666821038660</created>
+    <task id="LOCAL-00019" summary="added config">
+      <created>1667202366743</created>
       <option name="number" value="00019" />
       <option name="presentableId" value="LOCAL-00019" />
       <option name="project" value="LOCAL" />
-      <updated>1666821038660</updated>
+      <updated>1667202366743</updated>
     </task>
-    <task id="LOCAL-00020" summary="added new base color">
-      <created>1666821057359</created>
+    <task id="LOCAL-00020" summary=" added footnote">
+      <created>1667202386266</created>
       <option name="number" value="00020" />
       <option name="presentableId" value="LOCAL-00020" />
       <option name="project" value="LOCAL" />
-      <updated>1666821057359</updated>
+      <updated>1667202386266</updated>
     </task>
     <option name="localTasksCounter" value="21" />
     <servers />
@@ -271,24 +250,25 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Created basic environment for this project added prettier and eslint to project for taking care of clean code and config nativeWind for styling in this project" />
     <MESSAGE value="develop init" />
-    <MESSAGE value="fast comit" />
-    <MESSAGE value="added interface to custom drawer, and rendering fn. for render elements using given arr of names" />
-    <MESSAGE value="created single menu touchable item" />
-    <MESSAGE value="added rendering custom drawer based on screen list" />
-    <MESSAGE value="added idea" />
-    <MESSAGE value="addded file to ignore" />
-    <MESSAGE value="added assets" />
-    <MESSAGE value="idaConf" />
-    <MESSAGE value="created sample component for testing router" />
-    <MESSAGE value="done all btns for custom drawer, added possibility to redirect on click to given screen" />
-    <MESSAGE value="declaration for react-native-svg-transformer" />
-    <MESSAGE value="added styling for drawer elements" />
-    <MESSAGE value="added screen" />
-    <MESSAGE value="added LogOut screen" />
-    <MESSAGE value="metro config" />
-    <MESSAGE value="conf" />
-    <MESSAGE value="added new base color" />
-    <option name="LAST_COMMIT_MESSAGE" value="added new base color" />
+    <MESSAGE value="switched off multiline-ternary" />
+    <MESSAGE value="added logOut action" />
+    <MESSAGE value="Created Drawer menu component" />
+    <MESSAGE value="Added auth" />
+    <MESSAGE value="Added Login page" />
+    <MESSAGE value="Added Log Out pAge" />
+    <MESSAGE value="Added Log Out page" />
+    <MESSAGE value="Created Reusable button" />
+    <MESSAGE value="Added styles" />
+    <MESSAGE value="Created large label component" />
+    <MESSAGE value="Created login form component with states" />
+    <MESSAGE value="Created login page" />
+    <MESSAGE value="Created log out page" />
+    <MESSAGE value="created Pressable text component" />
+    <MESSAGE value="Created small label component" />
+    <MESSAGE value="Created component for containing footnote" />
+    <MESSAGE value="added config" />
+    <MESSAGE value=" added footnote" />
+    <option name="LAST_COMMIT_MESSAGE" value=" added footnote" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

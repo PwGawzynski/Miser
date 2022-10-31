@@ -8,7 +8,7 @@ export interface Props {
 
 export const SmallLabel = (props: Props) => {
   return (
-    <Text className={'ml-8 text-sm ' + (props.customStyles ?? '')}>
+    <Text className={'ml-8 text-sm text-white ' + (props.customStyles ?? '')}>
       {props.content}
     </Text>
   );
