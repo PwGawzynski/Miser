@@ -18,7 +18,7 @@ export function DrawerMenuItem({ ...props }: DrawerMenuItemProps) {
       }
     >
       {props.children}
-      <LargeLabel content={props.name} />
+      <LargeLabel content={props.name} customStyles={'ml-8'} />
     </TouchableOpacity>
   );
 }
