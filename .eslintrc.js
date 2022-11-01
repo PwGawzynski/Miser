@@ -51,7 +51,7 @@ module.exports = {
       'error',
       {
         arrays: 'never',
-        objects: 'always',
+        objects: 'always-multiline',
         imports: 'never',
         exports: 'never',
         functions: 'always-multiline',
@@ -59,6 +59,26 @@ module.exports = {
     ],
     '@typescript-eslint/comma-dangle': 'off',
     '@typescript-eslint/space-before-function-paren': 'off',
+    '@typescript-eslint/no-explicit-any': 'off',
+    '@typescript-eslint/no-unsafe-assignment': 'off',
+    'no-unsafe-assignment': 0,
+    '@typescript-eslint/member-delimiter-style': [
+      'error',
+      {
+        multiline: {
+          delimiter: 'semi', // 'none' or 'semi' or 'comma'
+          requireLast: true,
+        },
+        singleline: {
+          delimiter: 'semi', // 'semi' or 'comma'
+          requireLast: false,
+        },
+      },
+    ],
+    '@typescript-eslint/consistent-type-definitions': 'type' | 'interface',
+    '@typescript-eslint/explicit-function-return-type': 'off',
+    '@typescript-eslint/restrict-plus-operands': 'off',
+    'multiline-ternary': 'off',
   },
   settings: {
     react: {

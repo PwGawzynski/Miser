@@ -8,7 +8,12 @@ npm-debug.*
 *.key
 *.mobileprovision
 *.orig.*
-web-build/
-
+web-build
+.idea/workspace.xml
 # macOS
 .DS_Store
+.idea
+babel.config.js
+tailwind.config.js
+.prettierrc.js
+.eslintrc.js
