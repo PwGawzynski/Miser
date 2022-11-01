@@ -13,3 +13,7 @@ web-build
 # macOS
 .DS_Store
 .idea
+babel.config.js
+tailwind.config.js
+.prettierrc.js
+.eslintrc.js

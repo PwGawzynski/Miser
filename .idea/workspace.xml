@@ -1,11 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d249c390-4e61-45fb-afd1-8eb3dce41446" name="Changes" comment="added logo and navigation">
-      <change afterPath="$PROJECT_DIR$/src/Components/Atoms/Logo.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Components/Pages/RegisterAccount.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Pages/LoginPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Pages/LoginPage.tsx" afterDir="false" />
+    <list default="true" id="d249c390-4e61-45fb-afd1-8eb3dce41446" name="Changes" comment="onf">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -256,7 +253,35 @@
       <option name="project" value="LOCAL" />
       <updated>1667287043337</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="added logo and navigation">
+      <created>1667287077913</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1667287077913</updated>
+    </task>
+    <task id="LOCAL-00026" summary="created logo component">
+      <created>1667287088699</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1667287088699</updated>
+    </task>
+    <task id="LOCAL-00027" summary="created register account page-component">
+      <created>1667287114258</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1667287114258</updated>
+    </task>
+    <task id="LOCAL-00028" summary="onf">
+      <created>1667287121341</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1667287121341</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -279,9 +304,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="develop init" />
-    <MESSAGE value="switched off multiline-ternary" />
-    <MESSAGE value="added logOut action" />
     <MESSAGE value="Created Drawer menu component" />
     <MESSAGE value="Added auth" />
     <MESSAGE value="Added Login page" />
@@ -304,7 +326,10 @@
     <MESSAGE value="rem old inputs and changed to customINputs" />
     <MESSAGE value="rem old inputs and changed to custom input" />
     <MESSAGE value="added logo and navigation" />
-    <option name="LAST_COMMIT_MESSAGE" value="added logo and navigation" />
+    <MESSAGE value="created logo component" />
+    <MESSAGE value="created register account page-component" />
+    <MESSAGE value="onf" />
+    <option name="LAST_COMMIT_MESSAGE" value="onf" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
