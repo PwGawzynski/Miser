@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d249c390-4e61-45fb-afd1-8eb3dce41446" name="Changes" comment=" added footnote">
+    <list default="true" id="d249c390-4e61-45fb-afd1-8eb3dce41446" name="Changes" comment="added logo and navigation">
+      <change afterPath="$PROJECT_DIR$/src/Components/Atoms/Logo.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Components/Pages/RegisterAccount.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Pages/LoginPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Pages/LoginPage.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -225,7 +228,35 @@
       <option name="project" value="LOCAL" />
       <updated>1667202386266</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="added styling for button">
+      <created>1667286895391</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1667286895391</updated>
+    </task>
+    <task id="LOCAL-00022" summary="created Custom input component">
+      <created>1667286929635</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1667286929635</updated>
+    </task>
+    <task id="LOCAL-00023" summary="added logic for creating new account">
+      <created>1667286947379</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1667286947379</updated>
+    </task>
+    <task id="LOCAL-00024" summary="rem old inputs and changed to custom input">
+      <created>1667287043337</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1667287043337</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -248,7 +279,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Created basic environment for this project added prettier and eslint to project for taking care of clean code and config nativeWind for styling in this project" />
     <MESSAGE value="develop init" />
     <MESSAGE value="switched off multiline-ternary" />
     <MESSAGE value="added logOut action" />
@@ -268,7 +298,13 @@
     <MESSAGE value="Created component for containing footnote" />
     <MESSAGE value="added config" />
     <MESSAGE value=" added footnote" />
-    <option name="LAST_COMMIT_MESSAGE" value=" added footnote" />
+    <MESSAGE value="added styling for button" />
+    <MESSAGE value="created Custom input component" />
+    <MESSAGE value="added logic for creating new account" />
+    <MESSAGE value="rem old inputs and changed to customINputs" />
+    <MESSAGE value="rem old inputs and changed to custom input" />
+    <MESSAGE value="added logo and navigation" />
+    <option name="LAST_COMMIT_MESSAGE" value="added logo and navigation" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
