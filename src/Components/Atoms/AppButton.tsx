@@ -13,13 +13,13 @@ export const AppButton = (props: Props) => {
     <Pressable
       onPress={props.onPress}
       className={
-        'mt-20 mb-2 h-10 w-10/12 items-center justify-center rounded-md bg-orange' +
+        'mt-20 mb-2 h-10 w-10/12 items-center justify-center rounded-lg bg-blackGray ' +
         (props.customStyles ?? '')
       }
     >
       <Text
         className={
-          'align-center items-center justify-self-center text-xl text-white' +
+          'align-center items-center justify-self-center text-xl font-bold text-white' +
           (props.textCustomStyles ?? '')
         }
       >

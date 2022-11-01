@@ -1,17 +1,17 @@
-import React, { useContext, useState } from 'react';
-import { AuthContextProvider, AuthRootStackParamList } from '../../index';
-import { SafeAreaView } from 'react-native-safe-area-context';
+import { Logo } from '../Atoms/Logo';
+import { Text } from 'react-native';
 import { LoginForm } from '../Molecules/LoginForm';
 import { AppButton } from '../Atoms/AppButton';
 import { SmallNote } from '../Molecules/SmallNote';
 import { PressableText } from '../Atoms/PressableText';
-import { Logo } from '../Atoms/Logo';
-import { Text } from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
+import React, { useContext, useState } from 'react';
+import { AccountSetter, AuthRootStackParamList } from '../../index';
 import { NativeStackScreenProps } from '@react-navigation/native-stack';
-type Props = NativeStackScreenProps<AuthRootStackParamList, 'LoginPage'>;
+type Props = NativeStackScreenProps<AuthRootStackParamList, 'RegisterPage'>;
 
-export const LoginPage = ({ navigation }: Props) => {
-  const setter = useContext(AuthContextProvider);
+export const RegisterAccount = ({ navigation }: Props) => {
+  const newAccountSetter = useContext(AccountSetter);
   const [login, setLogin] = useState('');
   const [password, setPassword] = useState('');
 
@@ -31,24 +31,27 @@ export const LoginPage = ({ navigation }: Props) => {
         setPassword={setPassword}
       />
       <AppButton
-        onPress={() =>
-          setter?.login({
+        onPress={() => {
+          console.log(newAccountSetter);
+          newAccountSetter?.save({
             login,
             password,
-          })
-        }
-        textContext={'LOG IN'}
+          });
+          console.log(login);
+          navigation.navigate('LoginPage');
+        }}
+        textContext={'CREATE ACCOUNT'}
       />
       <SmallNote
         childrenContentOn={true}
-        firstPartText={"You don't have an account?"}
+        firstPartText={'Do you have an account?'}
         firstPartTextCustomStyles={' ml-0'}
       >
         <PressableText
-          onPress={() => navigation.navigate('RegisterPage')}
+          onPress={() => navigation.navigate('LoginPage')}
           customTextContentStyles={' ml-2'}
         >
-          CREATE NOW
+          LOG IN
         </PressableText>
       </SmallNote>
     </SafeAreaView>

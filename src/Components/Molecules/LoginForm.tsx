@@ -1,5 +1,6 @@
-import { TextInput, View } from 'react-native';
+import { View } from 'react-native';
 import React from 'react';
+import { CustomInput } from '../Atoms/CustomInput';
 
 export interface Props {
   login: string;
@@ -11,17 +12,16 @@ export interface Props {
 export const LoginForm = ({ ...props }: Props) => {
   return (
     <View className={'w-screen items-center'}>
-      <TextInput
-        className={'w-10/12 border-b-2 border-white pb-2 text-base text-white'}
+      <CustomInput
+        customStyles={'mb-6'}
         value={props.login}
-        onChangeText={props.setLogin}
+        setter={props.setLogin}
+        defaultValue={'E-mail'}
       />
-      <TextInput
-        className={
-          'mt-2 w-10/12 border-b-2 border-white pb-2 text-base text-white'
-        }
+      <CustomInput
         value={props.password}
-        onChangeText={props.setPassword}
+        setter={props.setPassword}
+        defaultValue={'Password'}
       />
     </View>
   );
