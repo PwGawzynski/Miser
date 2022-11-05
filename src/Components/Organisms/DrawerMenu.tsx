@@ -47,9 +47,7 @@ export const DrawerMenu = () => {
         <Drawer.Screen
           name="AccountSettings"
           component={AccountSettings}
-          options={{
-            headerShown: false,
-          }}
+          options={{ headerShown: false }}
         />
         <Drawer.Screen
           name="Filters"
