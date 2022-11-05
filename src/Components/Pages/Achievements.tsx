@@ -1,8 +1,8 @@
 import React from 'react';
 import { Text, View } from 'react-native';
 import { NativeStackScreenProps } from '@react-navigation/native-stack';
-import { RootStackParamList } from '../../index';
 import { SafeAreaView } from 'react-native-safe-area-context';
+import { RootStackParamList } from '../Organisms/DrawerMenu';
 type Props = NativeStackScreenProps<RootStackParamList, 'Achievements'>;
 export const Achievements = ({ navigation, route }: Props) => {
   return (
