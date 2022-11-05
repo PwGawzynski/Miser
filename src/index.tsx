@@ -107,6 +107,7 @@ export default function App(): JSX.Element {
   );
 
   return (
+
     <AuthContextProvider.Provider value={authProvider}>
       <AccountSetter.Provider value={newAccountProvider}>
         <NavigationContainer independent={true}>
