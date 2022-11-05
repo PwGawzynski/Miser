@@ -12,6 +12,7 @@ type Props = NativeStackScreenProps<
 >;
 
 export const TopBar = ({ navigation, route }: Props) => {
+  const asdf = 'asdf';
   return (
     <View className={'flex h-10 w-screen flex-row justify-center'}>
       <View className={'h-full w-1/2 justify-center pl-4'}>
