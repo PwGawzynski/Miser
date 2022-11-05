@@ -5,6 +5,7 @@ import SearchSVG from './../../assets/search-input.svg';
 import { TouchableOpacity, View } from 'react-native';
 import { NativeStackScreenProps } from '@react-navigation/native-stack';
 import { RootStackParamList } from './DrawerMenu';
+import { DrawerActions } from '@react-navigation/native';
 
 type Props = NativeStackScreenProps<
   RootStackParamList,
@@ -18,7 +19,7 @@ export const TopBar = ({ navigation, route }: Props) => {
       <View className={'h-full w-1/2 justify-center pl-4'}>
         <TouchableOpacity
           // TODO change this path
-          onPress={() => navigation.navigate('AccountSettings')}
+          onPress={() => navigation.dispatch(DrawerActions.openDrawer())}
         >
           <HamburgerSVG />
         </TouchableOpacity>
