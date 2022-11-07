@@ -8,7 +8,7 @@ export interface Props {
 
 export const LargeLabel = (props: Props) => {
   return (
-    <Text className={(props.customStyles ?? '') + '  text-2xl text-white'}>
+    <Text className={'  text-2xl text-white  ' + (props.customStyles ?? '')}>
       {props.content}
     </Text>
   );
