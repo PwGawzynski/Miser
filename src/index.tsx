@@ -5,6 +5,8 @@ import { NavigationContainer } from '@react-navigation/native';
 import { DrawerMenu } from './Components/Organisms/DrawerMenu';
 import { LoginPage } from './Components/Pages/LoginPage';
 import { RegisterAccount } from './Components/Pages/RegisterAccount';
+import { doc, getDoc } from 'firebase/firestore';
+import { db } from '../config';
 
 export interface LoginData {
   login: string;
@@ -14,6 +16,7 @@ export interface LoginData {
 export interface AuthContentObject {
   login: (data: LoginData) => void;
   logOut: () => void;
+  take: LoginData;
 }
 export interface SetUpNewAccount {
   save: (data: LoginData) => void;
@@ -34,6 +37,12 @@ export const AuthContextProvider = createContext<AuthContentObject | undefined>(
 export const AccountSetter = createContext<SetUpNewAccount | undefined>(
   undefined,
 );
+
+export interface UserContextObj {
+  userData: LoginData;
+  setUserData: React.Dispatch<LoginData>;
+}
+export const UserContext = createContext<UserContextObj | undefined>(undefined);
 
 export const Stack = createNativeStackNavigator<AuthRootStackParamList>();
 
@@ -72,6 +81,15 @@ export default function App(): JSX.Element {
     { login: 'user', password: '123' },
   );
 
+  const userProvider = useMemo(
+    () =>
+      ({
+        userData: newAccount,
+        setUserData: newAccountDispatch,
+      } as UserContextObj),
+    [newAccount, newAccountDispatch],
+  );
+
   useEffect(() => {
     console.log('RERENDER');
     console.log(newAccount, 'nA');
@@ -79,8 +97,14 @@ export default function App(): JSX.Element {
     // eslint-disable-next-line @typescript-eslint/require-await
     void (async () => {
       dispatch(OperationType.logOut);
+      const userRef = doc(db, 'user', 'GGE7ch9o6f3wxPf7JBd2');
+      const docSNap = await getDoc(userRef);
+      if (docSNap.exists()) {
+        console.log(docSNap.data());
+        newAccountDispatch(docSNap.data() as unknown as LoginData);
+      }
     })();
-  }, [newAccount]);
+  }, []);
 
   const authProvider = useMemo(
     () => ({
@@ -95,6 +119,7 @@ export default function App(): JSX.Element {
       logOut: () => {
         dispatch(OperationType.logOut);
       },
+      take: newAccount,
     }),
     [newAccount],
   );
@@ -109,38 +134,40 @@ export default function App(): JSX.Element {
   return (
     <AuthContextProvider.Provider value={authProvider}>
       <AccountSetter.Provider value={newAccountProvider}>
-        <NavigationContainer independent={true}>
-          <Stack.Navigator>
-            {authState.signIn ? (
-              <Stack.Screen
-                name={'Auth'}
-                options={{
-                  headerShown: false,
-                }}
-              >
-                {() => <DrawerMenu />}
-              </Stack.Screen>
-            ) : (
-              <>
+        <UserContext.Provider value={userProvider}>
+          <NavigationContainer independent={true}>
+            <Stack.Navigator>
+              {authState.signIn ? (
                 <Stack.Screen
-                  name={'LoginPage'}
-                  options={{ headerShown: false }}
-                >
-                  {(props) => <LoginPage {...props} />}
-                </Stack.Screen>
-
-                <Stack.Screen
-                  name={'RegisterPage'}
+                  name={'Auth'}
                   options={{
                     headerShown: false,
                   }}
                 >
-                  {(props) => <RegisterAccount {...props} />}
+                  {() => <DrawerMenu />}
                 </Stack.Screen>
-              </>
-            )}
-          </Stack.Navigator>
-        </NavigationContainer>
+              ) : (
+                <>
+                  <Stack.Screen
+                    name={'LoginPage'}
+                    options={{ headerShown: false }}
+                  >
+                    {(props) => <LoginPage {...props} />}
+                  </Stack.Screen>
+
+                  <Stack.Screen
+                    name={'RegisterPage'}
+                    options={{
+                      headerShown: false,
+                    }}
+                  >
+                    {(props) => <RegisterAccount {...props} />}
+                  </Stack.Screen>
+                </>
+              )}
+            </Stack.Navigator>
+          </NavigationContainer>
+        </UserContext.Provider>
       </AccountSetter.Provider>
     </AuthContextProvider.Provider>
   );
