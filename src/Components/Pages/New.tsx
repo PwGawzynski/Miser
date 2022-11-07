@@ -2,8 +2,8 @@ import React from 'react';
 import { Text, View } from 'react-native';
 import { NativeStackScreenProps } from '@react-navigation/native-stack';
 import { SafeAreaView } from 'react-native-safe-area-context';
-import { RootStackParamList } from '../Organisms/DrawerMenu';
-type Props = NativeStackScreenProps<RootStackParamList, 'New'>;
+import { TabNavigatorParamList } from '../../Navigation/TabBarNavigation';
+type Props = NativeStackScreenProps<TabNavigatorParamList, 'New'>;
 export const New = ({ navigation, route }: Props) => {
   return (
     <SafeAreaView className={'min-h-screen bg-midnight'}>
