@@ -12,18 +12,14 @@ export const Home = ({ navigation, route }: Props) => {
     <SafeAreaView className={'min-h-screen bg-black'}>
       <View style={styles.container}>
         <TopBar navigation={navigation} route={route} />
-        <TopBarNavigator/>
+        <TopBarNavigator />
       </View>
-      
-      
     </SafeAreaView>
   );
 };
-
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
   },
-
-})
+});
