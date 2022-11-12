@@ -7,6 +7,7 @@ import { LogOut } from '../Pages/LogOut';
 import { NavigationContainer } from '@react-navigation/native';
 import React from 'react';
 import { createDrawerNavigator } from '@react-navigation/drawer';
+import { AddNew } from '../Pages/AddNew';
 
 export type RootStackParamList = {
   Home: undefined;
@@ -14,6 +15,7 @@ export type RootStackParamList = {
   Filters: undefined;
   LogOut: undefined;
   Achievements: undefined;
+  AddNew: undefined;
 };
 
 // const Stack = createNativeStackNavigator<RootStackParamList>();
@@ -40,6 +42,13 @@ export const DrawerMenu = () => {
         <Drawer.Screen
           name="Home"
           component={Home}
+          options={{
+            headerShown: false,
+          }}
+        />
+        <Drawer.Screen
+          name="AddNew"
+          component={AddNew}
           options={{
             headerShown: false,
           }}

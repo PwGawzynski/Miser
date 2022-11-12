@@ -9,7 +9,7 @@ import { DrawerActions } from '@react-navigation/native';
 
 type Props = NativeStackScreenProps<
   RootStackParamList,
-  'Home' | 'AccountSettings' | 'Achievements' | 'Filters'
+  'Home' | 'AccountSettings' | 'Achievements' | 'Filters' | 'AddNew'
 >;
 
 export const TopBar = ({ navigation, route }: Props) => {
@@ -32,7 +32,7 @@ export const TopBar = ({ navigation, route }: Props) => {
         </TouchableOpacity>
         <TouchableOpacity
           className={' pl-4'}
-          onPress={() => navigation.navigate('AccountSettings')}
+          onPress={() => navigation.navigate('AddNew')}
         >
           <AddSVG height={'70%'} />
         </TouchableOpacity>

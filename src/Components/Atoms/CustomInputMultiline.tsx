@@ -8,7 +8,7 @@ export interface Props {
   defaultValue: string;
 }
 
-export const CustomInput = ({
+export const CustomInputMultiline = ({
   setter,
   value,
   defaultValue,
@@ -20,6 +20,7 @@ export const CustomInput = ({
     <>
       {!focus && value === '' ? (
         <TextInput
+          multiline={true}
           className={
             'w-10/12 border-b-2 border-white pb-2 text-xl font-medium text-gray ' +
             (customStyles ?? '')
@@ -30,6 +31,7 @@ export const CustomInput = ({
         />
       ) : (
         <TextInput
+          multiline={true}
           font-medium
           className={
             'w-10/12 border-b-2 border-white pb-2 text-xl font-medium text-white ' +
