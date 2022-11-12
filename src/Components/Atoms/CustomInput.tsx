@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 
 export interface Props {
   value: string;
-  setter: React.Dispatch<React.SetStateAction<string>>;
+  setter: React.Dispatch<React.SetStateAction<string>> | ((text: string) => void);
   customStyles?: string;
   defaultValue: string;
 }
