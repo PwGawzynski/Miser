@@ -1,14 +1,23 @@
-import { TouchableOpacity, View } from "react-native";
+import { Image, TouchableOpacity, View } from "react-native";
 import { CustomInput } from "../Atoms/CustomInput";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { DealInfoObj } from "../Pages/AddNew";
 import { SmallLabel } from "../Atoms/SmallLabel";
 import { CustomInputMultiline } from "../Atoms/CustomInputMultiline";
 import { LargeLabel } from "../Atoms/LargeLabel";
 import Plus from "../../assets/plus.svg";
 import { AppButton } from "../Atoms/AppButton";
+import { NativeStackScreenProps } from "@react-navigation/native-stack";
+import { RootStackParamList } from "./DrawerMenu";
 
-export const NewDealForm = () => {
+type Props = NativeStackScreenProps<RootStackParamList, 'AddNew'>;
+
+export const NewDealForm = ({navigation, route} : Props) => {
+
+
+  const  imgUri = route.params?.imgUri;
+
+
 
   const [deal, setDeal] = useState({
     link:'',
@@ -106,8 +115,15 @@ export const NewDealForm = () => {
     </View>
     <View className={'w-11/12 mt-4'}>
       <LargeLabel content={"Upload photo*"} customStyles={'text-gray '}/>
-      <TouchableOpacity className={'items-center justify-center w-full h-52 rounded-xl border-gray border-4 border-dashed'}>
-        <Plus/>
+      <TouchableOpacity
+        onPress={()=>navigation.navigate('CameraPg')}
+        className={'items-center justify-center w-full h-52 rounded-xl border-gray border-4 border-dashed'}>
+        {
+          imgUri ? <Image source={{
+            uri: imgUri
+          }} className={"w-full h-full"}/> :
+            <Plus/>
+        }
       </TouchableOpacity>
       <AppButton onPress={()=>console.log('sending to db: ', deal)} textContext={'ADD NEW DEAL'} customStyles={'mt-4 p-0 w-full'}></AppButton>
     </View>
