@@ -33,7 +33,7 @@ export const AddNew = ({ navigation, route }: Props) => {
         screenName={'ADD NEW'}
         onPress={navigation.goBack}
       />
-      <NewDealForm/>
+      <NewDealForm navigation={navigation} route={route}/>
     </SafeAreaView>
   );
 };
