@@ -8,6 +8,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import React from 'react';
 import { createDrawerNavigator } from '@react-navigation/drawer';
 import { AddNew } from '../Pages/AddNew';
+import { CameraPg } from "../Pages/CameraPg";
 
 export type RootStackParamList = {
   Home: undefined;
@@ -15,7 +16,10 @@ export type RootStackParamList = {
   Filters: undefined;
   LogOut: undefined;
   Achievements: undefined;
-  AddNew: undefined;
+  AddNew: {
+    imgUri: string
+  }| undefined;
+  CameraPg: undefined;
 };
 
 // const Stack = createNativeStackNavigator<RootStackParamList>();
@@ -49,6 +53,13 @@ export const DrawerMenu = () => {
         <Drawer.Screen
           name="AddNew"
           component={AddNew}
+          options={{
+            headerShown: false,
+          }}
+        />
+        <Drawer.Screen
+          name="CameraPg"
+          component={CameraPg}
           options={{
             headerShown: false,
           }}
