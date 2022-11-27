@@ -9,6 +9,8 @@ import Plus from "../../assets/plus.svg";
 import { AppButton } from "../Atoms/AppButton";
 import { NativeStackScreenProps } from "@react-navigation/native-stack";
 import { RootStackParamList } from "./DrawerMenu";
+import { doc, getDoc, setDoc } from "firebase/firestore";
+import { db } from "../../../config";
 
 type Props = NativeStackScreenProps<RootStackParamList, 'AddNew'>;
 
@@ -125,7 +127,13 @@ export const NewDealForm = ({navigation, route} : Props) => {
             <Plus/>
         }
       </TouchableOpacity>
-      <AppButton onPress={()=>console.log('sending to db: ', deal)} textContext={'ADD NEW DEAL'} customStyles={'mt-4 p-0 w-full'}></AppButton>
+      <AppButton onPress={()=>{
+        void (async () => {
+          const userRef = doc(db, 'Deals', 'BGe4Hnku1T6e9nI8OFjt');
+          (await setDoc(userRef, deal, { merge: false}));
+          navigation.navigate('Home');
+        })();
+      }} textContext={'ADD NEW DEAL'} customStyles={'mt-4 p-0 w-full'}></AppButton>
     </View>
   </View>
 }

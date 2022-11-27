@@ -2,6 +2,7 @@ import { View } from 'react-native';
 import React from 'react';
 import { CustomInput } from '../Atoms/CustomInput';
 
+
 export interface Props {
   login: string;
   setLogin: React.Dispatch<React.SetStateAction<string>>;
@@ -12,6 +13,9 @@ export interface Props {
 export const LoginForm = ({ ...props }: Props) => {
   return (
     <View className={'w-screen items-center'}>
+
+
+
       <CustomInput
         customStyles={'mb-6'}
         value={props.login}
