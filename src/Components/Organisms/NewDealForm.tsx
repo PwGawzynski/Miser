@@ -137,3 +137,6 @@ export const NewDealForm = ({navigation, route} : Props) => {
     </View>
   </View>
 }
+
+
+

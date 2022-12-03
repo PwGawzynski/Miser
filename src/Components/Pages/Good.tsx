@@ -8,7 +8,7 @@ type Props = NativeStackScreenProps<TabNavigatorParamList, 'Good'>;
 export const Good = ({ navigation, route }: Props) => {
 
   const offers = [
-    
+
     {
       id: 1,
       name: "Nike Shoes",
@@ -49,7 +49,7 @@ export const Good = ({ navigation, route }: Props) => {
       discount: "",
       photo: require("../../images/tree.jpg"),
     },
-    
+
   ];
 
   const offerList = offers.map((offer) => {
@@ -58,48 +58,59 @@ export const Good = ({ navigation, route }: Props) => {
         key={offer.id}
         style={{width:"99%",height:200}}>
         <View style={styles.offer}>
-          <ImageBackground source={offer.photo} style={styles.imagebg} imageStyle={{borderRadius: 10, borderBottomLeftRadius: 10, borderBottomRightRadius: 10}}>
+          <ImageBackground source={offer.photo} style={styles.imageBg} imageStyle={{borderRadius: 10, borderBottomLeftRadius: 10, borderBottomRightRadius: 10}}>
+            {/*//TODO tu trzeba to podzielić na komponenty osobne*/}
+
+            {/*//TODO dodać plus i minus do tych ptk */}
+            {/*KOMPONENT*/}
             <View style={styles.points}>
             <Text style={{ fontSize: 16, color: "#FFF"}}>
                 {`${offer.points}`}
             </Text>
             </View>
+
+            {/*KOMPONENT*/}
             <Text style={{left: 10, top: 145, fontSize: 22, position: 'absolute', color: "#FFF"}}>
                 {`${offer.name}`}
             </Text>
-            
+
+
+            {/*KOMPONENT*/}
             <Text style={{left: 10, top: 165, position: 'absolute', fontSize: 15, color: "#ffF"}}>
               {`${offer.where}`}
             </Text>
 
+            {/*KOMPONENT*/}
             <Text style={{alignSelf:'flex-end', top:145, right: 10, fontSize:22, color: 'orange', position:'absolute'}}>
                 {`${offer.price}`}
             </Text>
 
+            {/*KOMPONENT*/}
             <Text style={{color: "#fff", position: 'absolute', top: 165, right: 10}}>
-                {`${offer.ship}`} {`${offer.discount}`} 
+                {`${offer.ship}`} {`${offer.discount}`}
             </Text>
+
           </ImageBackground>
-        
+
         </View>
       </TouchableOpacity>
     )
   });
 
   return (
-    
+
       <ScrollView style = {styles.scroll}>
         <SafeAreaView>
         {offerList}
         </SafeAreaView>
       </ScrollView>
- 
+
   );
 };
 
 
 const styles = StyleSheet.create({
-  imagebg: {
+  imageBg: {
     width: "100%",
     height: "100%",
     display: "flex",
@@ -120,7 +131,7 @@ const styles = StyleSheet.create({
     height: 20,
     position: 'absolute',
     alignSelf: 'flex-end',
-    right: 10, 
+    right: 10,
     alignItems: 'center',
     textAlign:'center',
     backgroundColor: 'rgba(0,0,0,0.5)',
@@ -130,6 +141,6 @@ const styles = StyleSheet.create({
   scroll: {
     backgroundColor: '#000',
   },
-  
-  
+
+
 })
