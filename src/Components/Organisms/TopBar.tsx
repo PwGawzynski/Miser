@@ -16,7 +16,7 @@ export const TopBar = ({ navigation, route }: Props) => {
   const asdf = 'asdf';
   return (
     <View className={'flex h-10 w-screen flex-row justify-center'}>
-      <View className={'h-full w-1/2 justify-center pl-4'}>
+      <View className={'h-full w-1/2 justify-center pl-5'}>
         <TouchableOpacity
           // TODO change this path
           onPress={() => navigation.dispatch(DrawerActions.openDrawer())}
@@ -24,17 +24,20 @@ export const TopBar = ({ navigation, route }: Props) => {
           <HamburgerSVG />
         </TouchableOpacity>
       </View>
-      <View className={'flex h-full w-1/2 flex-row items-center justify-end '}>
+      <View
+        className={'flex h-full w-1/2 flex-row items-center justify-end pr-5 '}
+      >
         <TouchableOpacity
+          className={'pr-1'}
           onPress={() => navigation.navigate('AccountSettings')}
         >
-          <SearchSVG height={'90%'} />
+          <SearchSVG height={'100%'} />
         </TouchableOpacity>
         <TouchableOpacity
-          className={' pl-4'}
+          className={'pl-5'}
           onPress={() => navigation.navigate('AddNew')}
         >
-          <AddSVG height={'70%'} />
+          <AddSVG height={'100%'} />
         </TouchableOpacity>
       </View>
     </View>

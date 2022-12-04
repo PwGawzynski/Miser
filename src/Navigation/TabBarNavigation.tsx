@@ -19,15 +19,29 @@ function MyTabs() {
     <Tab.Navigator
       initialRouteName="TheBest"
       screenOptions={{
-        tabBarLabelStyle: { fontSize: 20, fontWeight: 'bold', color: '#fff' },
-        tabBarItemStyle: { width: 120 },
-        tabBarStyle: { backgroundColor: 'black' },
+        tabBarLabelStyle: {
+          fontSize: 19,
+          fontWeight: 'bold',
+          color: '#fff',
+          letterSpacing: 0.5,
+          overflow: 'visible',
+        },
+        tabBarItemStyle: {
+          overflow: 'visible',
+          width: 120,
+          height: 55,
+        },
+        tabBarStyle: {
+          backgroundColor: 'black',
+          overflow: 'visible',
+        },
         tabBarIndicatorStyle: {
           backgroundColor: '#fff',
           width: 40,
           left: 40,
           bottom: 10,
           height: 4,
+          borderRadius: 10,
         },
       }}
     >
