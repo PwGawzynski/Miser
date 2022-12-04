@@ -3,7 +3,9 @@ import React, { useState } from 'react';
 
 export interface Props {
   value: string;
-  setter: React.Dispatch<React.SetStateAction<string>> | ((text: string) => void);
+  setter:
+  | React.Dispatch<React.SetStateAction<string>>
+  | ((text: string) => void);
   customStyles?: string;
   defaultValue: string;
 }
@@ -21,7 +23,7 @@ export const CustomInput = ({
       {!focus && value === '' ? (
         <TextInput
           className={
-            'w-10/12 border-b-2 border-white pb-2 text-xl font-medium text-gray ' +
+            'w-10/12 border-b-2 border-[#848484] pb-2 text-xl font-medium text-white ' +
             (customStyles ?? '')
           }
           value={defaultValue}
