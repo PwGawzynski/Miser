@@ -13,7 +13,6 @@ type Props = NativeStackScreenProps<
 >;
 
 export const TopBar = ({ navigation, route }: Props) => {
-  const asdf = 'asdf';
   return (
     <View className={'flex h-10 w-screen flex-row justify-center'}>
       <View className={'h-full w-1/2 justify-center pl-4'}>
@@ -26,7 +25,7 @@ export const TopBar = ({ navigation, route }: Props) => {
       </View>
       <View className={'flex h-full w-1/2 flex-row items-center justify-end '}>
         <TouchableOpacity
-          onPress={() => navigation.navigate('AccountSettings')}
+          onPress={() => navigation.navigate('Search')}
         >
           <SearchSVG height={'90%'} />
         </TouchableOpacity>
