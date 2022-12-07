@@ -23,7 +23,7 @@ export type RootStackParamList = {
   }| undefined;
   CameraPg: undefined;
   Search: undefined;
-  OfferDetails: undefined;
+  OfferDetails: any;
 };
 
 // const Stack = createNativeStackNavigator<RootStackParamList>();
