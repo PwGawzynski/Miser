@@ -14,6 +14,7 @@ export const OfferNamePlaceholder = ({ OfferName }: Props) => {
         fontSize: 22,
         position: 'absolute',
         color: '#fff',
+        fontWeight: '500',
       }}
     >
       {`${OfferName}`}

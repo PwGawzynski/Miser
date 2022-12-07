@@ -33,7 +33,7 @@ export const Good = ({ navigation, route }: Props) => {
       <TouchableOpacity
         key={offer.id}
         style={{ width: '99%', height: 200 }}
-        className={'mb-2'}
+        className={'mb-1'}
       >
         <OneOffer offer={offer} navigation={navigation} route={route} />
       </TouchableOpacity>

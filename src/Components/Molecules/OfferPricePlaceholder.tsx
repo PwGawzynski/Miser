@@ -6,6 +6,10 @@ export interface Props {
 }
 
 export const OfferPricePlaceholder = ({ OfferPrice }: Props) => {
+  let zl = 'zł';
+  if (typeof OfferPrice === 'string') {
+    zl = '';
+  }
   return (
     <Text
       style={{
@@ -13,11 +17,12 @@ export const OfferPricePlaceholder = ({ OfferPrice }: Props) => {
         top: 140,
         right: 10,
         fontSize: 22,
-        color: 'orange',
+        color: '#EAA566',
         position: 'absolute',
+        fontWeight: '500',
       }}
     >
-      {`${OfferPrice}`}
+      {`${OfferPrice} ${zl}`}
     </Text>
   );
 };
