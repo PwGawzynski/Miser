@@ -21,8 +21,6 @@ export const TheBest = ({ navigation, route }: Props) => {
         key={offer.id}
         style={{ width: '99%', height: 200 }}
         className={'mb-1'}
-
-
         onPress={()=>{
           navigation.navigate("OfferDetails",{offer:offer});
         }}>
