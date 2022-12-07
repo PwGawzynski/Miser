@@ -21,7 +21,7 @@ export const TheBest = ({ navigation, route }: Props) => {
         key={offer.id}
         style={{width:"99%",height:200}} className={'mb-4'}
         onPress={()=>{
-          navigation.navigate("OfferDetails",{offer:offer});
+          navigation.navigate("OfferDetails", offer);
         }}>
         <OneOffer offer={offer} navigation={navigation} route={route}/>
       </TouchableOpacity>
