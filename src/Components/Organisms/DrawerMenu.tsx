@@ -11,6 +11,7 @@ import { AddNew } from '../Pages/AddNew';
 import { CameraPg } from "../Pages/CameraPg";
 import { Search } from "../Pages/Search";
 import { OfferDetails } from '../Pages/OfferDetails';
+import { SearchResult } from "../Pages/SearchResult";
 
 export type RootStackParamList = {
   Home: undefined;
@@ -24,6 +25,7 @@ export type RootStackParamList = {
   CameraPg: undefined;
   Search: undefined;
   OfferDetails: any;
+  SearchResult:undefined;
 };
 
 // const Stack = createNativeStackNavigator<RootStackParamList>();
@@ -102,6 +104,13 @@ export const DrawerMenu = () => {
         <Drawer.Screen
           name="LogOut"
           component={LogOut}
+          options={{
+            headerShown: false,
+          }}
+        />
+        <Drawer.Screen
+          name="SearchResult"
+          component={SearchResult}
           options={{
             headerShown: false,
           }}
