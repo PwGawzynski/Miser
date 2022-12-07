@@ -9,6 +9,8 @@ import React from 'react';
 import { createDrawerNavigator } from '@react-navigation/drawer';
 import { AddNew } from '../Pages/AddNew';
 import { CameraPg } from "../Pages/CameraPg";
+import { Search } from "../Pages/Search";
+import { OfferDetails } from '../Pages/OfferDetails';
 
 export type RootStackParamList = {
   Home: undefined;
@@ -20,6 +22,8 @@ export type RootStackParamList = {
     imgUri: string
   }| undefined;
   CameraPg: undefined;
+  Search: undefined;
+  OfferDetails: any;
 };
 
 // const Stack = createNativeStackNavigator<RootStackParamList>();
@@ -65,6 +69,13 @@ export const DrawerMenu = () => {
           }}
         />
         <Drawer.Screen
+          name="Search"
+          component={Search}
+          options={{
+            headerShown: false,
+          }}
+        />
+        <Drawer.Screen
           name="AccountSettings"
           component={AccountSettings}
           options={{ headerShown: false }}
@@ -82,6 +93,11 @@ export const DrawerMenu = () => {
           options={{
             headerShown: false,
           }}
+        />
+        <Drawer.Screen
+          name="OfferDetails"
+          component={OfferDetails}
+          options ={{headerShown: false}}
         />
         <Drawer.Screen
           name="LogOut"

@@ -5,18 +5,22 @@ import { NavigationContainer } from '@react-navigation/native';
 import { Good } from '../Components/Pages/Good';
 import { TheBest } from '../Components/Pages/TheBest';
 import { New } from '../Components/Pages/New';
+import { TouchableOpacity } from 'react-native-gesture-handler';
 
 export type TabNavigatorParamList = {
   New: undefined;
   Good: undefined;
   TheBest: undefined;
+  OfferDetails: any;
 };
+
 
 const Tab = createMaterialTopTabNavigator<TabNavigatorParamList>();
 
 function MyTabs() {
   return (
-    <Tab.Navigator
+    
+      <Tab.Navigator
       initialRouteName="TheBest"
       screenOptions={{
         tabBarLabelStyle: {
@@ -56,7 +60,9 @@ function MyTabs() {
         options={{ tabBarLabel: 'Good' }}
       />
       <Tab.Screen name="New" component={New} options={{ tabBarLabel: 'New' }} />
+      
     </Tab.Navigator>
+    
   );
 }
 
@@ -68,8 +74,6 @@ const styles = StyleSheet.create({
 
 export default function TopBarNavigator() {
   return (
-    <NavigationContainer independent={true}>
       <MyTabs></MyTabs>
-    </NavigationContainer>
   );
 }

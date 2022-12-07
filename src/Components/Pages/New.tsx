@@ -22,7 +22,10 @@ export const New = ({ navigation, route }: Props) => {
         style={{ width: '99%', height: 200 }}
         className={'mb-1'}
       >
-        <OneOffer offer={offer} navigation={navigation} route={route} />
+        onPress={()=>{
+          navigation.navigate("OfferDetails", offer);
+        }}>
+        <OneOffer offer={offer} navigation={navigation} route={route}/>
       </TouchableOpacity>
     );
   });
