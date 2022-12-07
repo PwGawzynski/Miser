@@ -41,7 +41,7 @@ export const Filters = ({ navigation, route }: Props) => {
         </View>
       </View>
     </View>
-    <AppButton customStyles={'w-screen  m-0 p-0 mt-60'} onPress={navigation.goBack} textContext={"SAVE"}/>
+    <AppButton customStyles={'w-screen  m-0 p-0 mt-40'} onPress={navigation.goBack} textContext={"SAVE"}/>
     </SafeAreaView>
 );
 };
