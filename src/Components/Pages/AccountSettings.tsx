@@ -26,9 +26,7 @@ export const AccountSettings = ({ navigation, route }: Props) => {
           onPress={() => navigation.goBack()}
         ></ScreenNameWBackArrow>
         <View
-          className={
-            'min-w-max flex-1 items-center justify-start bg-black pt-20'
-          }
+          className={'min-w-max flex-1 items-center justify-start bg-black '}
         >
           <UserProfilePhoto />
           <AppButton
@@ -41,23 +39,15 @@ export const AccountSettings = ({ navigation, route }: Props) => {
             value={userName}
             setter={setUserName}
             defaultValue={userDataProvider?.userData.login ?? ''}
-            customStyles={'pt-32'}
+            customStyles={'pt-10'}
           />
-          <AppButton
-            onPress={() => {
-              userDataProvider?.setUserData({
-                login: userName,
-                password: userDataProvider?.userData.password,
-              });
-              void (async () => {
-                const userRef = doc(db, 'user', 'GGE7ch9o6f3wxPf7JBd2');
-                await setDoc(userRef, { login: userName }, { merge: true });
-              })();
-            }}
-            textContext={'SAVE'}
-          />
-          <SmallNote firstPartText={'Reset All data'} childrenContentOn={true}>
+          <SmallNote
+            firstPartTextCustomStyles={'pt-3'}
+            firstPartText={'Reset All data'}
+            childrenContentOn={true}
+          >
             <PressableText
+              customPressableStyles={'pt-3 pl-2'}
               onPress={() => {
                 void (async () => {
                   const userRef = doc(db, 'user', 'GGE7ch9o6f3wxPf7JBd2');
@@ -76,6 +66,19 @@ export const AccountSettings = ({ navigation, route }: Props) => {
               RESET
             </PressableText>
           </SmallNote>
+          <AppButton
+            onPress={() => {
+              userDataProvider?.setUserData({
+                login: userName,
+                password: userDataProvider?.userData.password,
+              });
+              void (async () => {
+                const userRef = doc(db, 'user', 'GGE7ch9o6f3wxPf7JBd2');
+                await setDoc(userRef, { login: userName }, { merge: true });
+              })();
+            }}
+            textContext={'SAVE'}
+          />
         </View>
       </SafeAreaView>
     </ScrollView>
