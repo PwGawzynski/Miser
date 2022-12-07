@@ -189,7 +189,7 @@ export const NewDealForm = ({ navigation, route }: Props) => {
             })();
           }}
           textContext={'ADD NEW DEAL'}
-          customStyles={'mt-4 p-0 w-full'}
+          customStyles={'mt-4 p-0 mb-8 w-full'}
         ></AppButton>
       </View>
     </View>
