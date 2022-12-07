@@ -11,7 +11,7 @@ export const OfferNamePlaceholder = ({ OfferName }: Props) => {
       style={{
         left: 10,
         bottom: 30,
-        fontSize: 22,
+        fontSize: 18,
         position: 'absolute',
         color: '#fff',
         fontWeight: '500',

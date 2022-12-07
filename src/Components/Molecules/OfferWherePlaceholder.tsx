@@ -10,11 +10,11 @@ export const OfferWherePlaceholder = ({ OfferWhere }: Props) => {
     <Text
       style={{
         left: 10,
-        top: 165,
         position: 'absolute',
         fontSize: 15,
         color: '#848484',
       }}
+      className={'bottom-4'}
     >
       {`${OfferWhere}`}
     </Text>

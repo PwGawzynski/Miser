@@ -16,7 +16,7 @@ export const OfferPricePlaceholder = ({ OfferPrice }: Props) => {
         alignSelf: 'flex-end',
         top: 140,
         right: 10,
-        fontSize: 22,
+        fontSize: 18,
         color: '#EAA566',
         position: 'absolute',
         fontWeight: '500',
