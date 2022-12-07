@@ -22,7 +22,7 @@ export const RegisterAccount = ({ navigation }: Props) => {
       }
     >
       <Logo>
-        <Text className={'text-xl text-white'}>LOG IN</Text>
+        <Text className={'text-xl text-white'}>CREATE ACCOUNT</Text>
       </Logo>
       <LoginForm
         login={login}
