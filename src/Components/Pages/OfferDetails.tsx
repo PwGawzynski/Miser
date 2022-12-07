@@ -18,18 +18,17 @@ export interface Props{
 }
 
 export const OfferDetails = ({ offer, navigation, route }: Props &NavProps) => {
-  const offer1 = route.params?.offer;
-  console.log(route.params, " 123123");
+  console.log(route.params?.offer, " 123123");
   return (
     <SafeAreaView className={'h-screen w-screen items-center justify-start bg-black p-0 flex-1'}>
       <View style={styles.container}>
         <View style={styles.offer}>
-          <ImageBackground source={route.params?.photo} style={styles.imageBg} imageStyle={{borderRadius: 10, borderBottomLeftRadius: 10, borderBottomRightRadius: 10}}>
-            <PointsInfo points={route.params?.points}/>
-            <OfferNamePlaceholder OfferName={route.params?.name}/>
-            <OfferWherePlaceholder OfferWhere={route.params?.where}/>
-            <OfferPricePlaceholder OfferPrice={route.params?.price}/>
-            <OfferAdditionalInfo OfferShip={route.params?.ship} OfferDiscount={route.params?.discount}/>
+          <ImageBackground source={route.params?.offer.photo} style={styles.imageBg} imageStyle={{borderRadius: 10, borderBottomLeftRadius: 10, borderBottomRightRadius: 10}}>
+            <PointsInfo points={route.params?.offer.points}/>
+            <OfferNamePlaceholder OfferName={route.params?.offer.name}/>
+            <OfferWherePlaceholder OfferWhere={route.params?.offer.where}/>
+            <OfferPricePlaceholder OfferPrice={route.params?.offer.price}/>
+            <OfferAdditionalInfo OfferShip={route.params?.offer.ship} OfferDiscount={route.params?.discount}/>
           </ImageBackground>
         </View>
         <View style={styles.offerInfo}>
