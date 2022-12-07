@@ -28,6 +28,9 @@ export const Good = ({ navigation, route }: Props) => {
       <TouchableOpacity
         key={offer.id}
         style={{width:"99%",height:200}}
+        onPress={()=>{
+          navigation.navigate("OfferDetails", offer);
+        }}
       >
        <OneOffer offer={offer} navigation={navigation} route={route}/>
       </TouchableOpacity>

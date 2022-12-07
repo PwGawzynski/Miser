@@ -14,7 +14,10 @@ export const New = ({ navigation, route }: Props) => {
     return (
       <TouchableOpacity
         key={offer.id}
-        style={{width:"99%",height:200}}>
+        style={{width:"99%",height:200}}
+        onPress={()=>{
+          navigation.navigate("OfferDetails", offer);
+        }}>
         <OneOffer offer={offer} navigation={navigation} route={route}/>
       </TouchableOpacity>
     )
