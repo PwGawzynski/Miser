@@ -16,12 +16,12 @@ type Props = NativeStackScreenProps<TabNavigatorParamList, 'TheBest'>;
 export const TheBest = ({ navigation, route }: Props) => {
   const offerList = offerTheBest.map((offer) => {
     return (
-      
+
       <TouchableOpacity
         key={offer.id}
         style={{ width: '99%', height: 200 }}
         className={'mb-1'}
-      >
+
 
         onPress={()=>{
           navigation.navigate("OfferDetails",{offer:offer});

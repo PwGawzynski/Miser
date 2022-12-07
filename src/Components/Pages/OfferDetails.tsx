@@ -18,7 +18,7 @@ export interface Props{
 }
 
 export const OfferDetails = ({ offer, navigation, route }: Props &NavProps) => {
-  console.log(route.params?.offer, " 123123");
+  console.log(route.params?.offer, " ELOOOOO");
   return (
     <SafeAreaView className={'h-screen w-screen items-center justify-start bg-black p-0 flex-1'}>
       <View style={styles.container}>
@@ -28,7 +28,7 @@ export const OfferDetails = ({ offer, navigation, route }: Props &NavProps) => {
             <OfferNamePlaceholder OfferName={route.params?.offer.name}/>
             <OfferWherePlaceholder OfferWhere={route.params?.offer.where}/>
             <OfferPricePlaceholder OfferPrice={route.params?.offer.price}/>
-            <OfferAdditionalInfo OfferShip={route.params?.offer.ship} OfferDiscount={route.params?.discount}/>
+            <OfferAdditionalInfo OfferShip={route.params?.offer.ship} OfferDiscount={route.params?.offer.discount ?? '10 10'}/>
           </ImageBackground>
         </View>
         <View style={styles.offerInfo}>
@@ -38,7 +38,7 @@ export const OfferDetails = ({ offer, navigation, route }: Props &NavProps) => {
           <Text style={styles.bottomtext}>Added by</Text>
           <Text>...</Text>
           <View style={styles.btn1}>
-            <Button title="GO TO DEAL" color={'#434242'}/>
+            <Button onPress={navigation.goBack} title="Back" color={'#434242'}/>
           </View>
 
         </View>

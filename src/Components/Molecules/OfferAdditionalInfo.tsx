@@ -7,6 +7,7 @@ export interface Props {
 }
 
 export const OfferAdditionalInfo = ({ OfferShip, OfferDiscount }: Props) => {
+  console.log(OfferDiscount, 1213);
   const OfferDiscountWords = (OfferDiscount as string).split(' ');
   return (
     <View className={' absolute bottom-4 right-3 flex flex-row'}>
