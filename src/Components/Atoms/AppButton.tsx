@@ -13,7 +13,7 @@ export const AppButton = (props: Props) => {
     <Pressable
       onPress={props.onPress}
       className={
-        'mt-20 mb-2 h-10 w-10/12 items-center justify-center rounded-lg bg-gray ' +
+        'mt-20 mb-2 h-10 w-10/12 items-center justify-center rounded-lg bg-[#212121] ' +
         (props.customStyles ?? '')
       }
     >

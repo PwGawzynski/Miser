@@ -19,13 +19,16 @@ export const TheBest = ({ navigation, route }: Props) => {
       
       <TouchableOpacity
         key={offer.id}
-        style={{width:"99%",height:200}} className={'mb-4'}
+        style={{ width: '99%', height: 200 }}
+        className={'mb-1'}
+      >
+
         onPress={()=>{
           navigation.navigate("OfferDetails",{offer:offer});
         }}>
         <OneOffer offer={offer} navigation={navigation} route={route}/>
       </TouchableOpacity>
-    )
+    );
   });
 
   return (
@@ -37,9 +40,8 @@ export const TheBest = ({ navigation, route }: Props) => {
   );
 };
 
-
 const styles = StyleSheet.create({
   scroll: {
     backgroundColor: '#000',
   },
-})
+});
