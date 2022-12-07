@@ -1,5 +1,8 @@
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
-import React from 'react';
+import React, { useState } from "react";
+import Green from '../../assets/green.svg';
+import Red from '../../assets/red.svg';
+
 
 export interface Props {
   points: number;
@@ -21,16 +24,29 @@ const styles = StyleSheet.create({
 });
 
 export const PointsInfo = ({ points }: Props) => {
+  const [newPoints, setNewPoints] = useState(points);
   return (
     <TouchableOpacity
       style={styles.points}
       onFocus={() => {
         console.log('elo');
       }}
+      className={'flex flex-row items-center justify-center'}
     >
+      <TouchableOpacity
+        className={'p-2 z-100'}
+        onPress={()=>setNewPoints(prevState => prevState - 1)}
+      >
+        <Red/>
+      </TouchableOpacity>
       <Text
         style={{ fontSize: 16, color: '#FFF', fontWeight: '500' }}
-      >{`${points}`}</Text>
+      >{`${newPoints}`}</Text>
+      <TouchableOpacity
+        className={'p-2 z-100'}
+        onPress={()=>setNewPoints(prevState => prevState + 1)}>
+        <Green/>
+      </TouchableOpacity>
     </TouchableOpacity>
   );
 };
