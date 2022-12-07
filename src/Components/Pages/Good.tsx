@@ -35,7 +35,7 @@ export const Good = ({ navigation, route }: Props) => {
         style={{ width: '99%', height: 200 }}
         className={'mb-1'}
         onPress={()=>{
-          navigation.navigate("OfferDetails", offer);
+          navigation.navigate("OfferDetails", {offer:offer});
         }}
       >
         <OneOffer offer={offer} navigation={navigation} route={route} />

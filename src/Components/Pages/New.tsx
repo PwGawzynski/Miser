@@ -23,7 +23,7 @@ export const New = ({ navigation, route }: Props) => {
         className={'mb-1'}
 
         onPress={()=>{
-          navigation.navigate("OfferDetails", offer);
+          navigation.navigate("OfferDetails", {offer:offer});
         }}>
         <OneOffer offer={offer} navigation={navigation} route={route}/>
       </TouchableOpacity>
